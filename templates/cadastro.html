@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastros</title>
+</head>
+<body>
+  <h1>Cadastros</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Observação</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cadastro in cadastros %}
+      <tr>
+        <td>{{ cadastro.id }}</td>
+        <td>{{ cadastro.nome }}</td>
+        <td>{{ cadastro.email }}</td>
+        <td>{{ cadastro.telefone }}</td>
+        <td>{{ cadastro.observacao }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p>Tempo de geração do banco de dados: {{ tempo_execucao }} milisegundos</p>
+</body>
+</html>
